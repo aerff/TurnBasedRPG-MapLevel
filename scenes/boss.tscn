@@ -1,0 +1,146 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnkwndigw02ob"]
+
+[ext_resource type="Script" path="res://scripts/boss.gd" id="1_yhplj"]
+[ext_resource type="Texture2D" uid="uid://de5ioo8wku7ng" path="res://assets/spider.png" id="2_np0sg"]
+[ext_resource type="Texture2D" uid="uid://blpccsll5lslo" path="res://assets/vampireboss.png" id="3_lkuqm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s5ug"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_sjfd1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spider/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.895, 0.804)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spider/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, -162)]
+}
+
+[sub_resource type="Animation" id="Animation_lgd3u"]
+resource_name = "deal_damage"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spider/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(11.6667, -162), Vector2(-40, -162), Vector2(11.6667, -162)]
+}
+
+[sub_resource type="Animation" id="Animation_uf0hn"]
+resource_name = "take_damage"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spider/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.895, 0.804), Vector2(0.788716, 0.700423), Vector2(0.895, 0.804)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spider/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(5, -162), Vector2(25, -162), Vector2(5, -162)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jlqae"]
+_data = {
+"RESET": SubResource("Animation_sjfd1"),
+"deal_damage": SubResource("Animation_lgd3u"),
+"take_damage": SubResource("Animation_uf0hn")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jn0ad"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Boss" type="Node2D"]
+script = ExtResource("1_yhplj")
+
+[node name="Spider" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Spider"]
+position = Vector2(5, -162)
+scale = Vector2(0.895, 0.804)
+texture = ExtResource("2_np0sg")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 162.832, 888, 603.802)
+
+[node name="BossHPBar" type="ProgressBar" parent="Spider"]
+offset_left = -224.0
+offset_top = -398.0
+offset_right = 234.0
+offset_bottom = -359.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_6s5ug")
+max_value = 200.0
+value = 200.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Spider"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_jlqae")
+}
+
+[node name="VampireBoss" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="VampireBoss"]
+position = Vector2(-15, -169)
+scale = Vector2(0.597973, 0.597973)
+texture = ExtResource("3_lkuqm")
+
+[node name="BossHPBar" type="ProgressBar" parent="VampireBoss"]
+offset_left = -228.0
+offset_top = -454.0
+offset_right = 225.0
+offset_bottom = -417.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_jn0ad")
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VampireBoss"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_jlqae")
+}

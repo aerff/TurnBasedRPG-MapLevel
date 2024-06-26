@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjf5wh7d32gix"]
+
+[ext_resource type="Script" path="res://scripts/character_selection.gd" id="1_cc8b5"]
+[ext_resource type="Texture2D" uid="uid://cahr73ue3ux1k" path="res://assets/background (1).png" id="1_wr73j"]
+[ext_resource type="Texture2D" uid="uid://c7yhwumh8pedn" path="res://assets/elementalist.png" id="2_a37bt"]
+[ext_resource type="Texture2D" uid="uid://dp7kgstgatycg" path="res://assets/knight.png" id="3_3h2r7"]
+[ext_resource type="Texture2D" uid="uid://bdd0wylj1woyl" path="res://assets/death.png" id="4_fsuyd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3aof"]
+bg_color = Color(0.980201, 0.384055, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ar7e5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojvo2"]
+bg_color = Color(0.345034, 0.636251, 0.810426, 1)
+
+[node name="CharacterSelection" type="Node2D"]
+script = ExtResource("1_cc8b5")
+
+[node name="Background(1)" type="Sprite2D" parent="."]
+position = Vector2(584.5, 335)
+scale = Vector2(0.622396, 0.642593)
+texture = ExtResource("1_wr73j")
+
+[node name="Pyromancer" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pyromancer"]
+position = Vector2(274, 287)
+scale = Vector2(0.338426, 0.30787)
+texture = ExtResource("2_a37bt")
+
+[node name="Button" type="Button" parent="Pyromancer"]
+offset_left = 174.0
+offset_top = 464.0
+offset_right = 366.0
+offset_bottom = 510.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_l3aof")
+text = "PYROMANCER"
+
+[node name="Knight" type="Node2D" parent="."]
+position = Vector2(340, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Knight"]
+position = Vector2(261, 279)
+scale = Vector2(0.367117, 0.362269)
+texture = ExtResource("3_3h2r7")
+
+[node name="Button2" type="Button" parent="Knight"]
+offset_left = 174.0
+offset_top = 464.0
+offset_right = 366.0
+offset_bottom = 510.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar7e5")
+text = "KNIGHT"
+
+[node name="Death" type="Node2D" parent="."]
+position = Vector2(686, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Death"]
+position = Vector2(274, 288)
+scale = Vector2(0.298373, 0.279282)
+texture = ExtResource("4_fsuyd")
+
+[node name="Button3" type="Button" parent="Death"]
+offset_left = 174.0
+offset_top = 464.0
+offset_right = 366.0
+offset_bottom = 510.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojvo2")
+text = "DEATH"
+
+[connection signal="pressed" from="Pyromancer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Knight/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Death/Button3" to="." method="_on_button_3_pressed"]

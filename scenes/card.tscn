@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://da7u5xa3rtsr7"]
+
+[ext_resource type="Texture2D" uid="uid://5x0hehyyftah" path="res://assets/aboutcards/cardbackground.png" id="1_pv4r7"]
+[ext_resource type="Texture2D" uid="uid://crk7klj2277kn" path="res://assets/aboutcards/cardimage1.png" id="2_7gpdo"]
+
+[node name="Card" type="Node2D"]
+
+[node name="CardBackground" type="Sprite2D" parent="."]
+texture = ExtResource("1_pv4r7")
+
+[node name="CardImage" type="Sprite2D" parent="CardBackground"]
+position = Vector2(0.999999, -211)
+scale = Vector2(0.942, 0.942)
+texture = ExtResource("2_7gpdo")
+
+[node name="CardName" type="Label" parent="CardBackground"]
+offset_left = -233.0
+offset_top = 36.0
+offset_right = 236.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 40
+text = "SLASH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardDescription" type="Label" parent="CardBackground"]
+offset_left = -222.0
+offset_top = 135.0
+offset_right = 221.0
+offset_bottom = 430.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Deal 5 damage."
+horizontal_alignment = 1

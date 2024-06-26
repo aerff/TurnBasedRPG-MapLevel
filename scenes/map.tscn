@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bm6m42wp3onqe"]
+
+[ext_resource type="Texture2D" uid="uid://jpb5fv7aup14" path="res://assets/map.png" id="1_rk5q1"]
+[ext_resource type="Script" path="res://scripts/map.gd" id="1_xhadr"]
+[ext_resource type="Texture2D" uid="uid://kamvswamjto2" path="res://assets/spiderlogo.png" id="3_h3r0w"]
+[ext_resource type="Texture2D" uid="uid://de02ub8xfgxs8" path="res://assets/vampirelogo.png" id="4_m11lu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx7cv"]
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_xhadr")
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(1.00608, 1.00772)
+texture = ExtResource("1_rk5q1")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 921.0
+offset_top = 292.0
+offset_right = 1004.0
+offset_bottom = 366.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nx7cv")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 80.0
+offset_top = 237.0
+offset_right = 580.0
+offset_bottom = 737.0
+scale = Vector2(0.375541, 0.375541)
+texture_normal = ExtResource("3_h3r0w")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 499.0
+offset_top = 264.0
+offset_right = 999.0
+offset_bottom = 764.0
+scale = Vector2(0.257393, 0.257393)
+texture_normal = ExtResource("4_m11lu")
+
+[node name="Label" type="Label" parent="TextureButton2"]
+visible = false
+offset_left = -139.864
+offset_top = -85.4724
+offset_right = 664.136
+offset_bottom = 34.5276
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "Slay the spider first."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="mouse_entered" from="TextureButton2" to="." method="_on_texture_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton2" to="." method="_on_texture_button_2_mouse_exited"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
