@@ -4,3 +4,5 @@ extends Node2D
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/character_selection.tscn")
 # Mustafa Ocak - hiçbir şey yapılmadı
+#mainde değişiklik yapma denemesi
+#YEÖ
