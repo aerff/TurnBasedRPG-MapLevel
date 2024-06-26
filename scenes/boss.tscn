@@ -125,6 +125,7 @@ libraries = {
 }
 
 [node name="VampireBoss" type="Node2D" parent="."]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="VampireBoss"]
 position = Vector2(-15, -169)

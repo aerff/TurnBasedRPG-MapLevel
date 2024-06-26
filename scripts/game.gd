@@ -86,7 +86,7 @@ func show_turn_label_text(text: String):
 func _on_button_pressed(): # Slash butonuna basıldığında
 	$Player/AnimationPlayer.play("deal_damage")
 	boss_path.get_node("AnimationPlayer").play("take_damage")
-	boss_path.get_node("BossHPBar").value -= 5
+	boss_path.get_node("BossHPBar").value -= 100
 	if boss_path.get_node("BossHPBar").value <= 0:
 		if level in CompletedLevels.completed_levels: # Daha önce kestik
 			pass

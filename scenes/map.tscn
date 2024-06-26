@@ -44,6 +44,7 @@ texture_normal = ExtResource("4_m11lu")
 
 [node name="Label" type="Label" parent="TextureButton2"]
 visible = false
+layout_mode = 0
 offset_left = -139.864
 offset_top = -85.4724
 offset_right = 664.136

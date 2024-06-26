@@ -125,6 +125,7 @@ texture_normal = ExtResource("5_p5fa0")
 
 [node name="PauseScreen" type="ColorRect" parent="."]
 process_mode = 2
+visible = false
 offset_right = 1159.0
 offset_bottom = 651.0
 color = Color(0.266667, 0.270588, 0.270588, 0.839216)
