@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bko7av538q6rj"]
+[gd_scene load_steps=10 format=3 uid="uid://bko7av538q6rj"]
 
 [ext_resource type="Texture2D" uid="uid://cahr73ue3ux1k" path="res://assets/background (1).png" id="1_5xk3e"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hm85s"]
@@ -12,6 +12,9 @@ bg_color = Color(0.815686, 0.494118, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5scoe"]
 bg_color = Color(1, 0.62783, 0.148016, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24j3e"]
+bg_color = Color(0.526793, 1.2153e-06, 3.85046e-07, 1)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hm85s")
@@ -63,6 +66,15 @@ offset_bottom = 580.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jposa")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5scoe")
 text = "Full Mana"
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 521.0
+offset_top = 592.0
+offset_right = 660.0
+offset_bottom = 634.0
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_24j3e")
+text = "End Turn"
 
 [node name="Card" parent="." instance=ExtResource("5_28upa")]
 position = Vector2(180, 564)
@@ -150,6 +162,7 @@ text = "MAIN MENU"
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="ColorRect/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="ColorRect/BackToMM" to="." method="_on_back_to_mm_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

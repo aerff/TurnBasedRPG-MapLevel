@@ -70,11 +70,13 @@ func toggle_buttons():
 		$Button2.disabled = true
 		$Button3.disabled = true
 		$Button4.disabled = true
+		$Button5.disabled = true
 	else: # Basamıyorsam hepsini disabledlıktan çıkar
 		$Button.disabled = false
 		$Button2.disabled = false
 		$Button3.disabled = false
 		$Button4.disabled = false
+		$Button5.disabled = false
 
 func show_turn_label_text(text: String):
 	$TurnLabel.visible = true
@@ -95,7 +97,8 @@ func _on_button_pressed(): # Slash butonuna basıldığında
 		get_tree().change_scene_to_file("res://scenes/map.tscn")
 	turn += 1
 	toggle_buttons()
-	play_turn()
+	$Button5.disabled = false
+	
 
 func _on_button_2_pressed(): # Fireball butonuna basıldığında
 	if $Player/PlayerManaBar.value < 15:
@@ -113,19 +116,22 @@ func _on_button_2_pressed(): # Fireball butonuna basıldığında
 			get_tree().change_scene_to_file("res://scenes/map.tscn")
 		turn += 1
 		toggle_buttons()
-		play_turn()
+		$Button5.disabled = false
+		
 
 func _on_button_3_pressed(): # Heal butonuna basıldığında
 	$Player/PlayerHPBar.value += 10
 	turn += 1
 	toggle_buttons()
-	play_turn()
+	$Button5.disabled = false
+	
 
 func _on_button_4_pressed():
 	$Player/PlayerManaBar.value = $Player/PlayerManaBar.max_value
 	turn += 1
 	toggle_buttons()
-	play_turn()
+	$Button5.disabled = false
+	
 
 func _on_restart_pressed():
 	get_tree().reload_current_scene()
@@ -144,3 +150,8 @@ func _on_resume_pressed():
 func _on_main_menu_pressed():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _on_button_5_pressed(): #Tur bitirme buttonu
+	$Button5.disabled = true
+	play_turn()
