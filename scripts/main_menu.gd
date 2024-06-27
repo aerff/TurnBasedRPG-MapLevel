@@ -6,3 +6,4 @@ func _on_button_pressed():
 # Mustafa Ocak - hiçbir şey yapılmadı
 #mainde değişiklik yapma denemesi
 #YEÖ
+#MZA
