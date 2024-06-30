@@ -6,6 +6,7 @@ var boss_heal = 0
 var boss = null
 var boss_path
 var level
+
 	
 # 0, 2, 4... çift sayı ise -> Boss'un turu
 # 1, 3, 5... tek sayı ise -> Bizim turumuz
@@ -16,6 +17,7 @@ func _ready(): # --> Oyun başlangıcında ayarlanacak şeyler
 	$Boss/VampireBoss.visible = false
 	$TextureButton.disabled = false
 	$TextureButton2.disabled = false
+	$coinlabel.text = str(Global.coin)
 	if Boss.which_boss == 1:
 		level = 1
 		boss_path = $Boss/Spider
@@ -90,12 +92,15 @@ func show_turn_label_text(text: String):
 func _on_button_pressed(): # Slash butonuna basıldığında
 	$Player/AnimationPlayer.play("deal_damage")
 	boss_path.get_node("AnimationPlayer").play("take_damage")
-	boss_path.get_node("BossHPBar").value -= 100
+	boss_path.get_node("BossHPBar").value -= 200
 	if boss_path.get_node("BossHPBar").value <= 0:
 		if level in CompletedLevels.completed_levels: # Daha önce kestik
-			pass
+			Global.coin += 250
+			$coinlabel.text = str(Global.coin)
 		else: # İlk defa kesiyorsak
 			CompletedLevels.completed_levels.append(level)
+			Global.coin += 500
+			$coinlabel.text = str(Global.coin)
 		get_tree().change_scene_to_file("res://scenes/map.tscn")
 	turn += 1
 	toggle_buttons()
@@ -112,8 +117,11 @@ func _on_button_2_pressed(): # Fireball butonuna basıldığında
 		$Player/PlayerManaBar.value -= 15
 		if boss_path.get_node("BossHPBar").value <= 0:
 			if level in CompletedLevels.completed_levels: # Daha önce kestik
-				pass
+				Global.coin += 250
+				$coinlabel.text = str(Global.coin)
 			else: # İlk defa kesiyorsak
+				Global.coin += 500
+				$coinlabel.text = str(Global.coin)
 				CompletedLevels.completed_levels.append(level)
 			get_tree().change_scene_to_file("res://scenes/map.tscn")
 		turn += 1

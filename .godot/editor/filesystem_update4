@@ -5,3 +5,4 @@ res://scenes/card.tscn
 res://scenes/map.tscn
 res://scenes/boss.tscn
 res://scenes/character_selection.tscn
+res://scripts/global.gd
