@@ -14,6 +14,8 @@ func _ready(): # --> Oyun başlangıcında ayarlanacak şeyler
 	$PauseScreen.visible = false
 	$Boss/Spider.visible = false
 	$Boss/VampireBoss.visible = false
+	$TextureButton.disabled = false
+	$TextureButton2.disabled = false
 	if Boss.which_boss == 1:
 		level = 1
 		boss_path = $Boss/Spider
@@ -155,3 +157,13 @@ func _on_main_menu_pressed():
 func _on_button_5_pressed(): #Tur bitirme buttonu
 	$Button5.disabled = true
 	play_turn()
+
+
+func _on_texture_button_pressed():
+	$Player/PlayerHPBar.value += $Player/PlayerHPBar.max_value
+	$TextureButton.disabled = true
+
+
+func _on_texture_button_2_pressed():
+	$Player/PlayerManaBar.value = $Player/PlayerManaBar.max_value
+	$TextureButton2.disabled = true
