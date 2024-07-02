@@ -1,2 +1,5 @@
 res://scenes/main_menu.tscn
-res://scripts/main_menu.gd
+res://scenes/game.tscn
+res://scenes/map.tscn
+res://scenes/boss.tscn
+res://scenes/character_selection.tscn
