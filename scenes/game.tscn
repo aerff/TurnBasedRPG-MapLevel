@@ -1,14 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://bko7av538q6rj"]
+[gd_scene load_steps=11 format=3 uid="uid://bko7av538q6rj"]
 
 [ext_resource type="Texture2D" uid="uid://cahr73ue3ux1k" path="res://assets/background (1).png" id="1_5xk3e"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hm85s"]
 [ext_resource type="PackedScene" uid="uid://c73snhxb3xixd" path="res://scenes/player.tscn" id="2_rtpdh"]
 [ext_resource type="PackedScene" uid="uid://cnkwndigw02ob" path="res://scenes/boss.tscn" id="3_lb4p6"]
-[ext_resource type="PackedScene" uid="uid://da7u5xa3rtsr7" path="res://scenes/card.tscn" id="5_28upa"]
 [ext_resource type="Texture2D" uid="uid://4kbx0f5o61te" path="res://assets/pauselogo.png" id="5_p5fa0"]
 [ext_resource type="Texture2D" uid="uid://ru5ay3twjvi5" path="res://assets/healpotion.png" id="7_fduvo"]
 [ext_resource type="Texture2D" uid="uid://fwt4dirt71to" path="res://assets/manapotion.png" id="8_befms"]
-[ext_resource type="Texture2D" uid="uid://b6ibm4oiht3bn" path="res://assets/coin.png" id="9_5umwd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jposa"]
 bg_color = Color(0.815686, 0.494118, 0, 1)
@@ -36,9 +34,9 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Button" type="Button" parent="."]
 offset_left = 93.0
-offset_top = 425.0
-offset_right = 258.0
-offset_bottom = 672.0
+offset_top = 529.0
+offset_right = 298.0
+offset_bottom = 584.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_jposa")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5scoe")
 text = "SLASH (5 DMG)"
@@ -78,10 +76,6 @@ offset_bottom = 634.0
 size_flags_horizontal = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_24j3e")
 text = "End Turn"
-
-[node name="Card" parent="." instance=ExtResource("5_28upa")]
-position = Vector2(180, 564)
-scale = Vector2(0.290901, 0.290901)
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -176,28 +170,10 @@ offset_bottom = 299.0
 scale = Vector2(0.209461, 0.209461)
 texture_normal = ExtResource("8_befms")
 
-[node name="cointexture" type="TextureRect" parent="."]
-offset_left = 1011.0
-offset_top = 5.0
-offset_right = 1188.0
-offset_bottom = 183.0
-scale = Vector2(0.254775, 0.254775)
-texture = ExtResource("9_5umwd")
-
-[node name="coinlabel" type="Label" parent="."]
-offset_left = 1060.0
-offset_top = 11.0
-offset_right = 1100.0
-offset_bottom = 46.0
-theme_override_font_sizes/font_size = 25
-text = "15
-"
-
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="ColorRect/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="ColorRect/BackToMM" to="." method="_on_back_to_mm_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
