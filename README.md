@@ -1,4 +1,4 @@
-**Developed Days: 3**
+**Developed Days: 4**
 
 Our Turn-Based Combat game (Roguelike Deckbuilder wannabe) that is currently in super early development phase.
 
