@@ -7,3 +7,4 @@ func _on_button_pressed():
 #mainde değişiklik yapma denemesi
 #YEÖ
 #MZA
+# MacBook'tan oluyor mu denemesi
