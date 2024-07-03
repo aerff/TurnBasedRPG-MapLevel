@@ -9,4 +9,4 @@ func _on_button_pressed():
 #MZA
 # MacBook'tan oluyor mu denemesi
 #MZA deneme 2
-#MZA3
+#MZAAA
