@@ -1,37 +1,37 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719940725
-README.md::TextFile::-1::1719492231::0::1::::<><>::
-::res://assets/::1719753490
-background (1).png::CompressedTexture2D::4788382847716472122::1719492231::1719492231::1::::<><>::
-coin.png::CompressedTexture2D::4578873550202241319::1719753479::1719753490::1::::<><>::
-death.png::CompressedTexture2D::2604738838152244131::1719492231::1719492231::1::::<><>::
-elementalist.png::CompressedTexture2D::7068894805683343211::1719492231::1719492231::1::::<><>::
-healpotion.png::CompressedTexture2D::1236320711418717834::1719752728::1719752732::1::::<><>::
-knight.png::CompressedTexture2D::8278773653515769410::1719492231::1719492231::1::::<><>::
-manapotion.png::CompressedTexture2D::397566110392848588::1719752728::1719752731::1::::<><>::
-map.png::CompressedTexture2D::662779846375482797::1719492231::1719492231::1::::<><>::
-pauselogo.png::CompressedTexture2D::2056223355486912202::1719492231::1719492231::1::::<><>::
-spider.png::CompressedTexture2D::7502460282629240192::1719492231::1719492231::1::::<><>::
-spiderlogo.png::CompressedTexture2D::702655521387936203::1719492231::1719492231::1::::<><>::
-vampireboss.png::CompressedTexture2D::3189589598549181092::1719492231::1719492231::1::::<><>::
-vampirelogo.png::CompressedTexture2D::7493302048719574913::1719492231::1719492231::1::::<><>::
-::res://assets/aboutcards/::1719492231
-cardbackground.png::CompressedTexture2D::2154676644890614459::1719492231::1719492231::1::::<><>::
-cardimage1.png::CompressedTexture2D::5988656881405150129::1719492231::1719492231::1::::<><>::
-::res://scenes/::1719936673
-boss.tscn::PackedScene::5707299271614358705::1719936673::0::1::::<><>::res://scripts/boss.gd<>uid://de5ioo8wku7ng::::res://assets/spider.png<>uid://blpccsll5lslo::::res://assets/vampireboss.png
-card.tscn::PackedScene::7226591262214423250::1719755834::0::1::::<><>::uid://5x0hehyyftah::::res://assets/aboutcards/cardbackground.png<>uid://crk7klj2277kn::::res://assets/aboutcards/cardimage1.png
-character_selection.tscn::PackedScene::5416724063419678519::1719936673::0::1::::<><>::res://scripts/character_selection.gd<>uid://cahr73ue3ux1k::::res://assets/background (1).png<>uid://c7yhwumh8pedn::::res://assets/elementalist.png<>uid://dp7kgstgatycg::::res://assets/knight.png<>uid://bdd0wylj1woyl::::res://assets/death.png
-game.tscn::PackedScene::3119154503050230359::1719936673::0::1::::<><>::uid://cahr73ue3ux1k::::res://assets/background (1).png<>res://scripts/game.gd<>uid://c73snhxb3xixd::::res://scenes/player.tscn<>uid://cnkwndigw02ob::::res://scenes/boss.tscn<>uid://da7u5xa3rtsr7::::res://scenes/card.tscn<>uid://4kbx0f5o61te::::res://assets/pauselogo.png<>uid://ru5ay3twjvi5::::res://assets/healpotion.png<>uid://fwt4dirt71to::::res://assets/manapotion.png<>uid://b6ibm4oiht3bn::::res://assets/coin.png
-main_menu.tscn::PackedScene::1039793065306248250::1719936673::0::1::::<><>::res://scripts/main_menu.gd<>uid://cahr73ue3ux1k::::res://assets/background (1).png
-map.tscn::PackedScene::3293464362497447912::1719936673::0::1::::<><>::uid://jpb5fv7aup14::::res://assets/map.png<>res://scripts/map.gd<>uid://kamvswamjto2::::res://assets/spiderlogo.png<>uid://de02ub8xfgxs8::::res://assets/vampirelogo.png
-player.tscn::PackedScene::7077803465385191561::1719492231::0::1::::<><>::res://scripts/player.gd<>uid://c7yhwumh8pedn::::res://assets/elementalist.png
-::res://scripts/::1719756202
-boss.gd::GDScript::-1::1719492231::0::1::::<>Node2D<>::
-character_selection.gd::GDScript::-1::1719492231::0::1::::<>Node2D<>::
-completed_levels.gd::GDScript::-1::1719492231::0::1::::<>Node<>::
-game.gd::GDScript::-1::1719756202::0::1::::<>Node2D<>::
-global.gd::GDScript::-1::1719755616::0::1::::<>Node<>::
-main_menu.gd::GDScript::-1::1719492637::0::1::::<>Node2D<>::
-map.gd::GDScript::-1::1719492231::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1719492231::0::1::::<>Node2D<>::
+::res://::1719984782
+README.md::TextFile::-1::1719946743::0::1::::<><>::
+::res://assets/::1719946743
+background (1).png::CompressedTexture2D::4788382847716472122::1719416357::1719416406::1::::<><>::
+coin.png::CompressedTexture2D::4578873550202241319::1719946743::1719946743::1::::<><>::
+death.png::CompressedTexture2D::2604738838152244131::1719416357::1719416406::1::::<><>::
+elementalist.png::CompressedTexture2D::7068894805683343211::1719416357::1719416406::1::::<><>::
+healpotion.png::CompressedTexture2D::1236320711418717834::1719946743::1719946743::1::::<><>::
+knight.png::CompressedTexture2D::8278773653515769410::1719416357::1719416406::1::::<><>::
+manapotion.png::CompressedTexture2D::397566110392848588::1719946743::1719946743::1::::<><>::
+map.png::CompressedTexture2D::662779846375482797::1719416357::1719416406::1::::<><>::
+pauselogo.png::CompressedTexture2D::2056223355486912202::1719416357::1719416406::1::::<><>::
+spider.png::CompressedTexture2D::7502460282629240192::1719416357::1719416406::1::::<><>::
+spiderlogo.png::CompressedTexture2D::702655521387936203::1719416357::1719416406::1::::<><>::
+vampireboss.png::CompressedTexture2D::3189589598549181092::1719416357::1719416406::1::::<><>::
+vampirelogo.png::CompressedTexture2D::7493302048719574913::1719416357::1719416406::1::::<><>::
+::res://assets/aboutcards/::1719416406
+cardbackground.png::CompressedTexture2D::2154676644890614459::1719416357::1719416406::1::::<><>::
+cardimage1.png::CompressedTexture2D::5988656881405150129::1719416357::1719416406::1::::<><>::
+::res://scenes/::1719955069
+boss.tscn::PackedScene::5707299271614358705::1719955069::0::1::::<><>::res://scripts/boss.gd<>uid://de5ioo8wku7ng::::res://assets/spider.png<>uid://blpccsll5lslo::::res://assets/vampireboss.png
+card.tscn::PackedScene::7226591262214423250::1719422202::0::1::::<><>::uid://5x0hehyyftah::::res://assets/aboutcards/cardbackground.png<>uid://crk7klj2277kn::::res://assets/aboutcards/cardimage1.png
+character_selection.tscn::PackedScene::5416724063419678519::1719955069::0::1::::<><>::res://scripts/character_selection.gd<>uid://cahr73ue3ux1k::::res://assets/background (1).png<>uid://c7yhwumh8pedn::::res://assets/elementalist.png<>uid://dp7kgstgatycg::::res://assets/knight.png<>uid://bdd0wylj1woyl::::res://assets/death.png
+game.tscn::PackedScene::3119154503050230359::1719955069::0::1::::<><>::uid://cahr73ue3ux1k::::res://assets/background (1).png<>res://scripts/game.gd<>uid://c73snhxb3xixd::::res://scenes/player.tscn<>uid://cnkwndigw02ob::::res://scenes/boss.tscn<>uid://4kbx0f5o61te::::res://assets/pauselogo.png<>uid://ru5ay3twjvi5::::res://assets/healpotion.png<>uid://fwt4dirt71to::::res://assets/manapotion.png
+main_menu.tscn::PackedScene::1039793065306248250::1719955068::0::1::::<><>::res://scripts/main_menu.gd<>uid://cahr73ue3ux1k::::res://assets/background (1).png
+map.tscn::PackedScene::3293464362497447912::1719955069::0::1::::<><>::uid://jpb5fv7aup14::::res://assets/map.png<>res://scripts/map.gd<>uid://kamvswamjto2::::res://assets/spiderlogo.png<>uid://de02ub8xfgxs8::::res://assets/vampirelogo.png<>uid://b6ibm4oiht3bn::::res://assets/coin.png
+player.tscn::PackedScene::7077803465385191561::1719416357::0::1::::<><>::res://scripts/player.gd<>uid://c7yhwumh8pedn::::res://assets/elementalist.png
+::res://scripts/::1719947058
+boss.gd::GDScript::-1::1719416357::0::1::::<>Node2D<>::
+character_selection.gd::GDScript::-1::1719416357::0::1::::<>Node2D<>::
+completed_levels.gd::GDScript::-1::1719416357::0::1::::<>Node<>::
+game.gd::GDScript::-1::1719947058::0::1::::<>Node2D<>::
+global.gd::GDScript::-1::1719946743::0::1::::<>Node<>::
+main_menu.gd::GDScript::-1::1719946743::0::1::::<>Node2D<>::
+map.gd::GDScript::-1::1719946856::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1719416357::0::1::::<>Node2D<>::
