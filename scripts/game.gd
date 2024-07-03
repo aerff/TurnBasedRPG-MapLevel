@@ -1,5 +1,5 @@
 extends Node2D
-
+# Zahid pull denemesi için
 var turn = 0
 var boss_damage = 0
 var boss_heal = 0
