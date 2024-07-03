@@ -8,3 +8,4 @@ func _on_button_pressed():
 #YEÖ
 #MZA
 # MacBook'tan oluyor mu denemesi
+#MZA deneme 2
